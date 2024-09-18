@@ -143,8 +143,6 @@ databricks_job_variables = {
         node_type_id = "Standard_DS3_v2"
         spark_env_vars = {
           PYSPARK_PYTHON  = "/databricks/python3/bin/python"
-          PYSPARK_PYTHON2 = "/databricks/python3/bin/python2"
-          PYSPARK_PYTHON3 = "/databricks/python3/bin/python3"
         }
         spark_conf = {
           "spark.master"                     = "local[*, 4]"

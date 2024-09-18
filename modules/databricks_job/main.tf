@@ -60,7 +60,6 @@ resource "databricks_job" "workflow_job" {
               spot_bid_max_price = azure_attributes.value.spot_bid_max_price
             }
           }
-          # node_type_id = data.databricks_node_type.node_type["${each.key}-${job_cluster.value.job_cluster_key}"].id
           node_type_id   = new_cluster.value.node_type_id
           spark_env_vars = new_cluster.value.spark_env_vars
           spark_conf     = new_cluster.value.spark_conf
